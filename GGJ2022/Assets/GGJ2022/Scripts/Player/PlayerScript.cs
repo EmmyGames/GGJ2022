@@ -7,6 +7,7 @@ namespace GGJ2022.Player
         public PlayerCollision playerCollision;
         public PlayerInput playerInput;
         public PlayerMovement playerMovement;
+        public PlayerShoot playerShoot;
 
         private void Start()
         {
