@@ -8,6 +8,7 @@ namespace GGJ2022.Player
 {
     public class PlayerShoot : MonoBehaviour
     {
+        public ParticleSystem muzzleFlash;
         public PlayerScript playerScript;
         public GunStats gun;
         public UnityEngine.Camera fpsCamera;
@@ -25,7 +26,7 @@ namespace GGJ2022.Player
             if (_isReloading)
                 return;
             gun.currentAmmo--;
-            
+            muzzleFlash.Play();
             onGunFire.Raise();
             
             if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out var hit, gun.range))

@@ -307,8 +307,7 @@ MonoBehaviour:
   playerInput: {fileID: 3958945017953269421}
   playerMovement: {fileID: 3958945017953269422}
   playerShoot: {fileID: 568765680}
-  buffInventory: {fileID: 1145138098}
---- !u!114 &1145138098
+--- !u!114 &1542960005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -320,8 +319,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c2af9d27325aff4293c0e00dad6e45c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerScript: {fileID: 3958945017953269409}
-  inventory: {fileID: 11400000, guid: a8c17c5935735e9428cd7ce5b5e5d359, type: 2}
+  _buffs: 0000
+  _durations:
+  - 0
+  - 0
 --- !u!1 &3958945018752475479
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,6 +361,58 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3958945017840418241}
     m_Modifications:
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: lengthInSec
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: ForceModule.x.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: ForceModule.z.scalar
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: ShapeModule.m_Scale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: ShapeModule.m_Scale.y
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: ShapeModule.m_Scale.z
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: ShapeModule.radiusThickness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: InitialModule.startSize.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+      propertyPath: TriggerModule.primitives.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3929677256038845368, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
       propertyPath: m_Name
       value: Rifle
@@ -422,6 +475,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+--- !u!198 &2430612145007265266 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2432717848369986255, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
+  m_PrefabInstance: {fileID: 34334588233908029}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3958945017662305412 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3929677256038845369, guid: 27510df47723d82418a00d35cde27c4c, type: 3}
@@ -444,6 +502,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e7391e3424ae354cb7ef4d2d7daf65e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  muzzleFlash: {fileID: 2430612145007265266}
   playerScript: {fileID: 3958945017953269409}
   gun: {fileID: 11400000, guid: 48ff99b481834014bac9b35356237b76, type: 2}
   fpsCamera: {fileID: 3958945017840418242}
