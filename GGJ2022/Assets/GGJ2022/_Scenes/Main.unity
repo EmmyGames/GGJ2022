@@ -3888,7 +3888,7 @@ Transform:
   - {fileID: 739463797}
   - {fileID: 195809642}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &569950946
 GameObject:
@@ -7374,8 +7374,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1357309934}
+  - component: {fileID: 1357309935}
+  - component: {fileID: 1357309936}
   m_Layer: 0
-  m_Name: 'light Room Spawns '
+  m_Name: LightRoomSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7406,6 +7408,62 @@ Transform:
   m_Father: {fileID: 1159374468}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1357309935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357309933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f246ce2bea1e4eb059f52135dbe39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffObject: {fileID: 7460793437935262053, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
+  maxBuffs: 4
+  startingBuffAmount: 2
+  spawnInterval: 15
+  spawnLocations:
+  - {fileID: 1532728795}
+  - {fileID: 1318619751}
+  - {fileID: 1021679145}
+  - {fileID: 1569376132}
+  - {fileID: 748107824}
+  - {fileID: 455947351}
+  - {fileID: 615032015}
+  - {fileID: 1071240873}
+  - {fileID: 1545429519}
+  - {fileID: 1653319220}
+  timeSinceSpawn: 0
+--- !u!114 &1357309936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357309933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4226a0105f3af46a6d99b88cc61608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 4637b24635a0dbe439eab6417e46b57b, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1357309935}
+        m_TargetAssemblyTypeName: GGJ2022.Buff.SpawnBuffs, Assembly-CSharp
+        m_MethodName: BuffCollected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1368464596
 GameObject:
   m_ObjectHideFlags: 0
@@ -11533,8 +11591,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2103670562}
+  - component: {fileID: 2103670563}
+  - component: {fileID: 2103670564}
   m_Layer: 0
-  m_Name: Dark Room Spawns
+  m_Name: DarkRoomSpawns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11565,6 +11625,62 @@ Transform:
   m_Father: {fileID: 837750403}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2103670563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103670561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f246ce2bea1e4eb059f52135dbe39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buffObject: {fileID: 8615808276509027249, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
+  maxBuffs: 4
+  startingBuffAmount: 2
+  spawnInterval: 15
+  spawnLocations:
+  - {fileID: 1404861211}
+  - {fileID: 1985928938}
+  - {fileID: 1056201679}
+  - {fileID: 1795731260}
+  - {fileID: 732028101}
+  - {fileID: 2032547978}
+  - {fileID: 716169429}
+  - {fileID: 1301393157}
+  - {fileID: 1248003800}
+  - {fileID: 1076002576}
+  timeSinceSpawn: 0
+--- !u!114 &2103670564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2103670561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4226a0105f3af46a6d99b88cc61608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: fd30c0f7435eb544db7c90c26b23aed3, type: 2}
+  unityEventResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2103670563}
+        m_TargetAssemblyTypeName: GGJ2022.Buff.SpawnBuffs, Assembly-CSharp
+        m_MethodName: BuffCollected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2105530659
 GameObject:
   m_ObjectHideFlags: 0
@@ -11953,117 +12069,3 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143720895}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &7460793437570332273
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -33
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262052, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7460793437935262053, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-      propertyPath: m_Name
-      value: Light Buff
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
---- !u!1001 &8615808277423344671
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -33
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027248, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8615808276509027249, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-      propertyPath: m_Name
-      value: Dark buff
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
