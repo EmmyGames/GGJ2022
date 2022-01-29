@@ -32,7 +32,6 @@ namespace GGJ2022.Player
             {
                 if (hit.transform.CompareTag("Enemy"))
                 {
-                    Debug.Log(hit.transform.name);
                     hit.transform.gameObject.GetComponent<EnemyStats>().TakeDamage(gun.damage);
                 }
             }
