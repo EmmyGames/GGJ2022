@@ -4877,6 +4877,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   time: 20
+  spawnIndex: 0
+  onItemCollect: {fileID: 11400000, guid: 4637b24635a0dbe439eab6417e46b57b, type: 2}
 --- !u!1 &7460793438170664686
 GameObject:
   m_ObjectHideFlags: 0
