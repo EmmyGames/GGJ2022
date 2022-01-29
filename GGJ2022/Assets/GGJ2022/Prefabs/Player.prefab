@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 3958945017953269421}
   - component: {fileID: 3958945017953269422}
   - component: {fileID: 3958945017953269409}
+  - component: {fileID: 1145138098}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -306,6 +307,21 @@ MonoBehaviour:
   playerInput: {fileID: 3958945017953269421}
   playerMovement: {fileID: 3958945017953269422}
   playerShoot: {fileID: 568765680}
+  buffInventory: {fileID: 1145138098}
+--- !u!114 &1145138098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958945017953269419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c2af9d27325aff4293c0e00dad6e45c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 3958945017953269409}
+  inventory: {fileID: 11400000, guid: a8c17c5935735e9428cd7ce5b5e5d359, type: 2}
 --- !u!1 &3958945018752475479
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,18 +1,21 @@
-using System;
+using GGJ2022.Inventory;
 using UnityEngine;
 
 namespace GGJ2022.Player
 {
     public class BuffInventory : MonoBehaviour
     {
-        public bool[] _buffs = new bool[2];
-        public float[] _durations = new float[2];
+        public PlayerScript playerScript;
+
+        public Afflictions inventory;
+        // The array of bools isn't really needed. The time is enough.
+        //public bool[] buffs = new bool[2];
+        //public float[] durations = new float[2];
         
         public void AddBuff(int index, float time)
         {
-            _buffs[index] = true;
-            _durations[index] = time;
-
+            inventory.buffs[index] = true;
+            inventory.durations[index] = time;
         }
 
         private void Update()
@@ -22,19 +25,18 @@ namespace GGJ2022.Player
 
         private void Countdown()
         {
-            for (int i = 0; i < _durations.Length; i++)
+            for (int i = 0; i < inventory.durations.Length; i++)
             {
-                if (_durations[i] > 0f)
+                if (inventory.durations[i] > 0f)
                 {
                     //Time.deltaTime accounts for a change in time in Unity
-                    _durations[i] -= Time.deltaTime;
+                    inventory.durations[i] -= Time.deltaTime;
                 }
                 else
                 {
-                    _buffs[i] = false;
+                    inventory.buffs[i] = false;
                 }
             }
         }
-
     }
 }

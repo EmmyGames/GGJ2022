@@ -8,6 +8,7 @@ namespace GGJ2022.Player
         public PlayerInput playerInput;
         public PlayerMovement playerMovement;
         public PlayerShoot playerShoot;
+        public BuffInventory buffInventory;
 
         private void Start()
         {
