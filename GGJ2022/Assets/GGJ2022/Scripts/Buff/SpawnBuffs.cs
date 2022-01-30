@@ -43,6 +43,7 @@ namespace GGJ2022.Buff
                     // Keep track of which index this buff is associated with.
                     buff.GetComponent<BuffController>().spawnIndex = randomPosition;
                     i++;
+                    _numberOfBuffs++;
                 }
             }
         }
