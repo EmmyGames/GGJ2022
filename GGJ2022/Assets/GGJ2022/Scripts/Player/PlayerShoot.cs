@@ -12,19 +12,23 @@ namespace GGJ2022.Player
         public PlayerScript playerScript;
         public GunStats gun;
         public UnityEngine.Camera fpsCamera;
+        public AudioClip gunShot;
+        public float pitchRange;
         private bool _isReloading;
 
         [SerializeField] private VoidEvent onGunFire;
         [SerializeField] private VoidEvent onGunReload;
-
+        private AudioSource _audioSource;
         private void Start()
         {
+            _audioSource = GetComponent<AudioSource>();
             gun.currentAmmo = gun.magazineSize;
         }
         public void ShootGun()
         {
             if (_isReloading)
                 return;
+            PlayGunShot();
             gun.currentAmmo--;
             muzzleFlash.Play();
             onGunFire.Raise();
@@ -53,6 +57,12 @@ namespace GGJ2022.Player
             gun.currentAmmo = gun.magazineSize;
             onGunReload.Raise();
             _isReloading = false;
+        }
+
+        private void PlayGunShot()
+        {
+            _audioSource.pitch = Random.Range(1 - pitchRange, 1 + pitchRange);
+            _audioSource.PlayOneShot(gunShot);
         }
     }
 }
