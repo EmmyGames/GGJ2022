@@ -1,6 +1,6 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 namespace GGJ2022.Enemy
 {
@@ -19,6 +19,14 @@ namespace GGJ2022.Enemy
         private void Update()
         {
             _navMeshAgent.destination = _player.transform.position;
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                SceneManager.LoadScene("LossScreen");
+            }
         }
     }
 }
