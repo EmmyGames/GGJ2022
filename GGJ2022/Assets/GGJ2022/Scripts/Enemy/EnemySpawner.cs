@@ -41,5 +41,10 @@ namespace GGJ2022.Enemy
                 _numberOfEnemies++;
             }
         }
+
+        public void EnemyDied()
+        {
+            _numberOfEnemies--;
+        }
     }
 }

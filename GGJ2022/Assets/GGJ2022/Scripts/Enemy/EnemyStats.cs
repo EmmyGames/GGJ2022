@@ -1,3 +1,4 @@
+using GGJ2022.GameEvents;
 using GGJ2022.Inventory;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,7 @@ namespace GGJ2022.Enemy
         public Slider healthBar;
         public int buffInt;
         public Afflictions inventory;
+        [SerializeField] private VoidEvent onEnemyDeath;
         private void Start()
         {
             currentHealth = maxHealth;
@@ -25,7 +27,10 @@ namespace GGJ2022.Enemy
                 currentHealth -= damage;
                 healthBar.value = (currentHealth / maxHealth);
                 if (currentHealth <= 0)
+                {
+                    onEnemyDeath.Raise();
                     Death();
+                }
             }
         }
 
