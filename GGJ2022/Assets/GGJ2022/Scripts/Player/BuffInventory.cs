@@ -15,7 +15,7 @@ namespace GGJ2022.Player
         public void AddBuff(int index, float time)
         {
             inventory.buffs[index] = true;
-            inventory.durations[index] = time;
+            inventory.durations[index] += time;
         }
 
         private void Update()
