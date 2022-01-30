@@ -8054,9 +8054,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffObject: {fileID: 7460793437935262053, guid: 0cc1ae77e2c52d645b82ffbd33009ee6, type: 3}
-  maxBuffs: 4
+  maxBuffs: 3
   startingBuffAmount: 2
-  spawnInterval: 15
+  spawnInterval: 9
   spawnLocations:
   - {fileID: 1532728795}
   - {fileID: 1318619751}
@@ -8500,7 +8500,7 @@ MonoBehaviour:
   - {fileID: 276929070}
   - {fileID: 22253555}
   - {fileID: 1955445545}
-  spawnInterval: 5
+  spawnInterval: 4
   enemies:
   - {fileID: 9081519381415784244, guid: 30337064008b62a45a6731aa9404fe3f, type: 3}
   - {fileID: 8050271860331139043, guid: 3d43df6e5484648408f777f963c786da, type: 3}
@@ -12824,9 +12824,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffObject: {fileID: 8615808276509027249, guid: f5b5c620f55ed37469d0f14dc7438da2, type: 3}
-  maxBuffs: 4
+  maxBuffs: 3
   startingBuffAmount: 2
-  spawnInterval: 15
+  spawnInterval: 9
   spawnLocations:
   - {fileID: 1404861211}
   - {fileID: 1985928938}

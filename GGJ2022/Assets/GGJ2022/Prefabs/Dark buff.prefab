@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   index: 1
-  time: 20
+  time: 10
   spawnIndex: 0
   onItemCollect: {fileID: 11400000, guid: fd30c0f7435eb544db7c90c26b23aed3, type: 2}
 --- !u!1 &8615808277839140602
